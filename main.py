@@ -1,5 +1,16 @@
 contact_list = []
 
+def show_contact_list():
+    print("Contact List:")
+
+    for i, contact in enumerate(contact_list):
+        print(f"{i + 1}.")
+        print(f"Name: {contact["name"]}")
+        print(f"Email: {contact["email"]}")
+        print(f"Phone Number: {contact["phone number"]}")
+
+        return contact_list
+
 def add_contact():
     name = input("Enter a name: ")
     email = input("Enter an email: ")
@@ -26,7 +37,7 @@ while True:
     elif option == "d":
         pass
     elif option == "s":
-        pass
+        show_contact_list()
     elif option == "q":
         break
     else: 
