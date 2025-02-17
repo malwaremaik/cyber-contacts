@@ -19,6 +19,25 @@ def add_contact():
 
     return
 
+def delete_contact():
+    if contact_list == []:
+        print("Your contact list is empty.")
+
+        return
+
+    show_contact_list()
+    
+    position_to_delete = int(input("Please enter the number of the contact you would like to delete: "))
+
+    if position_to_delete < 1 or position_to_delete > len(contact_list):
+        print("You entered an invalid number.")
+
+        return
+
+    else:
+        deleted_contact = contact_list.pop(position_to_delete - 1)
+        print(f"{deleted_contact["name"]} was deleted successfully.")
+
 print()
 print("Welcome to CYBERCONTACTS!")
 
@@ -35,7 +54,7 @@ while True:
     if option == "a":
         add_contact()
     elif option == "d":
-        pass
+        delete_contact()
     elif option == "s":
         show_contact_list()
     elif option == "q":
