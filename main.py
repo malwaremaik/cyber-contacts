@@ -9,7 +9,7 @@ def show_contact_list():
         print(f"Email: {contact["email"]}")
         print(f"Phone Number: {contact["phone number"]}")
 
-        return contact_list
+    return
 
 def add_contact():
     name = input("Enter a name: ")
@@ -17,7 +17,7 @@ def add_contact():
     phone_number = input("Enter a phone number: ")
     contact_list.append({ "name": name, "email": email, "phone number": phone_number })    
 
-    return contact_list
+    return
 
 print()
 print("Welcome to CYBERCONTACTS!")
